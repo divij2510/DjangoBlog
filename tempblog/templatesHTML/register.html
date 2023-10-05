@@ -1,0 +1,28 @@
+{%extends 'form.html' %}
+{%block start%}
+
+            <div class="form__title">User Registration</div>
+            <div class="form__item">
+                <label for="first_name" class="form__label">First Name</label>
+                <input type="text" class="form__input" name="first_name" id="first_name" placeholder="Enter your first name">
+            </div>
+            <div class="form__item">
+                <label for="last_name" class="form__label">Last Name</label>
+                <input type="text" class="form__input" name="last_name" id="last_name" placeholder="Enter your last name">
+            </div>
+            <div class="form__item">
+                <label for="email_id" class="form__label">Email ID</label>
+                <input type="email" class="form__input" name="email_id" id="email_id" placeholder="Enter your email address">
+            </div>
+            <div class="form__item">
+                <label for="username" class="form__label">Username</label>
+                <input type="text" class="form__input" name="username" id="username" placeholder="Enter your username">
+            </div>
+            <div class="form__item">
+                <label for="password" class="form__label">Password</label>
+                <input type="password" class="form__input" name="password" id="password" placeholder="Enter your password">
+            </div>
+            <div class="form__item">
+                <button class="form__btn" type="submit">Register</button>
+            </div>
+      {%endblock%}
