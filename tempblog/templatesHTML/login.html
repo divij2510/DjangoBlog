@@ -1,16 +1,30 @@
 {%extends 'form.html' %}
 {%block start%}
-  
-            <div class="form__title">User Sign In</div>
-            <div class="form__item">
-                <label for="username" class="form__label">Username</label>
-                <input type="text" class="form__input" name="username" id="username" placeholder="Enter your username">
-            </div>
-            <div class="form__item">
-                <label for="password" class="form__label">Password</label>
-                <input type="password" class="form__input" name="password" id="password" placeholder="Enter your password">
-            </div>
-            <div class="form__item">
-                <button class="form__btn" type="submit">Sign In</button>
-            </div>
-      {%endblock%}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+</ul>
+{% endif %}
+
+
+<div class="form__title">User Sign In</div>
+<div class="form__item">
+    <label for="username" class="form__label">Username</label>
+    <input type="text" class="form__input" name="username" id="username" placeholder="Enter your username">
+</div>
+<div class="form__item">
+    <label for="password" class="form__label">Password</label>
+    <input type="password" class="form__input" name="password" id="password" placeholder="Enter your password">
+</div>
+<div class="form__item">
+    <button class="form__btn" type="submit">Sign In</button>
+</div>
+<div class="form__btn-container">
+    <button class="form__btn" type="button" onclick="window.location.href='/'">Back to Home</button>
+</div>
+<div>.</div>
+<div>Don't have an account?<a href="{%url 'Register'%}"> Register </a></div>
+
+{%endblock%}

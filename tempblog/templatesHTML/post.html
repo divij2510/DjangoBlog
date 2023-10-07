@@ -1,19 +1,27 @@
 {%extends 'form.html' %}
 {%block start%}
-            <div class="form__title">Your Blog</div>
-            <div class="form__item">
-                <label for="title" class="form__label">Title</label>
-                <input type="text" class="form__input" name="title" id="givennames" placeholder="Enter your title">
-            </div>
-            <div class="form__item">
-                <label for="body" class="form__label">Content</label>
-                <textarea maxlength="500" class="form__input form__textarea" name="body" id="message" placeholder="Your Content goes here"></textarea>
-            </div>
-            <div class="form__item">
-                <label for="image" class="form__label">Image</label>
-                <input type="file" class="form__input" id="image">
-            </div>
-            <div class="form__item">
-                <button class="form__btn" type="submit">Post</button>
-            </div>
-     {%endblock%}
+<div class="form__title">Your Blog</div>
+<div class="form__item">
+    <label for="title" class="form__label">Title</label>
+    <input type="text" class="form__input" name="title" id="givennames" placeholder="Enter your title">
+</div>
+<div class="form__item">
+    <label for="body" class="form__label">Content</label>
+    <textarea maxlength="1500" class="form__input form__textarea" name="body" id="message"
+        placeholder="Your Content goes here"></textarea>
+</div>
+<div class="form__item">
+    <label for="image" class="form__label">Image</label>
+    <input type="file" class="form__input" name="image" id="image">
+</div>
+<div class="form__item">
+    <label for="title" class="form__label">Image Title</label>
+    <input type="text" class="form__input" name="image_title" id="givennames" placeholder="Enter your Image title">
+</div>
+<div class="form__item">
+    <button class="form__btn" type="submit">Post</button>
+</div>
+<div class="form__btn-container">
+    <button class="form__btn" type="button" onclick="window.location.href='/'">Back to Home</button>
+</div>
+{%endblock%}

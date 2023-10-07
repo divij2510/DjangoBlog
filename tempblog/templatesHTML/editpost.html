@@ -1,0 +1,33 @@
+
+{%extends 'form.html' %}
+{%block start%}
+<div class="spacer_height"> </div><div class="spacer_height"> </div><div class="spacer_height"> </div>
+<div class="form__title">Edit Your Blog</sssdiv>
+
+<div class="form__item">
+    <label for="title" class="form__label">Title</label>
+    <input type="text" class="form__input" name="title" id="givennames" value="{{oldpost.title}}">
+</div>
+<div class="form__item">
+    <label for="body" class="form__label">Content</label>
+    <textarea maxlength="1500" class="form__input form__textarea" name="body" id="message">{{oldpost.body}}</textarea>
+</div>
+<div class="form__item">
+    <label for="image" class="form__label">Current Image</label>
+    <img src="{{ oldpost.image.url }}" alt="{{ oldpost.image_title }}" class="blog-image">
+</div>
+<div class="form__item">
+    <label for="image" class="form__label">Upload New Image</label>
+    <input type="file" class="form__input" name="image" id="image">
+</div>
+<div class="form__item">
+    <label for="title" class="form__label">Image Title</label>
+    <input type="text" class="form__input" name="image_title" id="givennames" value="{{oldpost.image_title}}">
+</div>
+<div class="form__item">
+    <button class="form__btn" type="submit">Save Changes</button>
+</div>
+<div class="form__btn-container">
+    <button class="form__btn" type="button" onclick="window.location.href='/'">Back to Home</button>
+</div>
+{%endblock%}

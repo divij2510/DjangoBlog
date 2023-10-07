@@ -1,0 +1,70 @@
+<style>
+    /* Confirmation Card Styles */
+.confirmation-card {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.confirmation-card p {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.confirm-button,
+.cancel-button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.confirm-button {
+    background-color: #f53a3a;
+    color: #fff;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* Button Styles */
+.delete-button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover + .confirmation-card {
+    display: block;
+}
+
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="deleteButton" class="delete-button">Delete File</button>
+
+    <!-- Confirmation Card -->
+    <div class="confirmation-card">
+        <p>Are you sure you want to delete this file?</p>
+        <button class="confirm-button">Confirm</button>
+        <button class="cancel-button">Cancel</button>
+    </div>
+</body>
+</html>
